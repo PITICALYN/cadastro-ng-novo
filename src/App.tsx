@@ -76,7 +76,7 @@ export default function App() {
                 <div className="flex flex-col md:flex-row gap-8 items-center md:items-start bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
                     <div className="w-40 h-40 flex-shrink-0 flex items-center justify-center relative group">
                         <img
-                            src="https://raw.githubusercontent.com/PITICALYN/cadastro-NG/main/public/logo.png"
+                            src="./logo.jpg"
                             alt="Logo Nova Geração"
                             className="w-full h-full object-contain rounded-full shadow-lg border-4 border-blue-50 group-hover:scale-105 transition-transform duration-300"
                             onError={(e) => {
