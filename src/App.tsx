@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Phone, MapPin, Calendar, ArrowRight, CheckCircle, MessageSquare } from 'lucide-react';
+import { User, Phone, MapPin, Calendar, ArrowRight, CheckCircle, MessageSquare, Mail } from 'lucide-react';
 
 export default function App() {
     const [submitted, setSubmitted] = useState(false);
@@ -16,6 +16,7 @@ export default function App() {
     // 2. Clique com o botão direito no campo e escolha "Inspecionar".
     // 3. Procure pelo atributo 'name' que começa com "entry.XXXXXXXX" (ex: entry.12345678).
     const entryIds = {
+        email: "emailAddress",
         name: "entry.909365028",
         phone: "entry.882237367",
         address: "entry.574474001",
@@ -48,8 +49,8 @@ export default function App() {
                         <CheckCircle className="w-12 h-12" />
                     </div>
                     <h2 className="text-3xl font-black text-slate-800 uppercase italic">Cadastrado!</h2>
-                    <p className="text-slate-600 text-lg leading-relaxed">
-                        Seja bem-vindo(a) à família Nova Geração! Agora você também faz parte dessa história. 🎭💙
+                    <p className="text-slate-600 text-lg leading-relaxed text-center px-4">
+                        🎭💙 Seja bem-vindo(a)! Agora você também faz parte da nossa história. 💙🎭
                     </p>
                     <div className="pt-4">
                         <a
@@ -87,15 +88,25 @@ export default function App() {
                     </div>
 
                     <div className="space-y-4 text-slate-700 leading-relaxed text-sm">
-                        <h1 className="text-2xl font-black text-blue-950 uppercase tracking-tighter leading-none mb-2">Seja muito bem-vindo(a) à Turma Nova Geração! 🎭</h1>
-                        <p>Recebemos você com muita alegria. A partir de agora, você passa a fazer parte de uma história construída com amizade, respeito e amor pela cultura popular.</p>
-                        <p>A Turma Nova Geração nasceu no bairro de Campo Grande, Zona Oeste do Rio de Janeiro, há <span className="font-extrabold text-blue-700 px-1.5 py-0.5 bg-blue-50 rounded italic">26 anos</span> formada inicialmente por amigos e familiares que compartilhavam o mesmo sonho: manter viva a tradição do bate-bola, valorizando a cultura, a criatividade e a união.</p>
-                        <p>Ao longo dos anos, a Nova Geração se tornou muito mais do que uma turma de carnaval. Tornou-se uma família cultural, que promove amizade, tradição, eventos culturais e ações sociais, sempre com o objetivo de fortalecer nossa identidade e preservar essa manifestação tão importante da cultura carioca.</p>
-                        <p>Aqui acreditamos que quem tem amigo tem tudo, e cada novo integrante fortalece ainda mais essa corrente de união.</p>
-                        <p>Por isso, queremos parabenizar você pela escolha de fazer parte da Nova Geração. Que essa caminhada seja marcada por alegria, companheirismo e muitas histórias boas para contar.</p>
+                        <h1 className="text-2xl font-black text-blue-950 uppercase tracking-tighter leading-none mb-2">🎭💙 Seja muito bem-vindo(a) à família Nova Geração e Nova Geraçãozet’s! 💙🎭</h1>
+                        
+                        <p>Recebemos você com o coração cheio de alegria! A partir de agora, você passa a fazer parte de uma história construída com amizade verdadeira, respeito e muito amor pela nossa cultura popular.</p>
+                        
+                        <p>A Turma Nova Geração, nascida em Campo Grande, Zona Oeste do Rio de Janeiro, há 26 anos, começou com um grupo de amigos e familiares unidos por um sonho: manter viva a tradição do bate-bola, valorizando a cultura, a criatividade e, acima de tudo, a união.</p>
+                        
+                        <p>Com o tempo, crescemos… e hoje somos muito mais do que uma turma de carnaval. Somos uma família cultural!<br />
+                        Uma família que promove tradição, amizade, eventos culturais, ações sociais e que luta todos os dias para manter viva a essência da nossa cultura.</p>
+                        
+                        <p>E junto com a força da Nova Geraçãozet’s, fortalecemos ainda mais esse movimento, mostrando que nossa cultura é plural, inclusiva e cheia de identidade.</p>
+                        
+                        <p>Aqui a gente acredita de verdade: quem tem amigo tem tudo!<br />
+                        E cada novo integrante chega para somar, fortalecer e escrever mais um capítulo dessa linda história.</p>
+                        
+                        <p>Por isso, queremos te parabenizar pela sua escolha.<br />
+                        Que sua caminhada com a gente seja repleta de alegria, parceria, evolução e momentos inesquecíveis.</p>
+
                         <div className="pt-4 border-t border-slate-100 text-blue-900 font-bold text-center md:text-left italic text-base">
-                            Seja bem-vindo(a) à família Nova Geração!<br />
-                            Agora você também faz parte dessa história. 🎭💙
+                            🎭💙 Seja bem-vindo(a)! Agora você também faz parte da nossa história. 💙🎭
                         </div>
                     </div>
                 </div>
@@ -121,6 +132,21 @@ export default function App() {
                                     name={entryIds.name}
                                     type="text"
                                     placeholder="Como está no seu RG"
+                                    className="w-full pl-12 pr-4 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-blue-700 focus:bg-white transition-all text-slate-700 font-medium"
+                                />
+                            </div>
+                        </div>
+
+                        {/* E-mail */}
+                        <div className="space-y-1.5">
+                            <label className="text-xs font-bold text-slate-500 uppercase ml-1 tracking-wider">E-mail</label>
+                            <div className="relative group">
+                                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-300 group-focus-within:text-blue-700 transition-colors" />
+                                <input
+                                    required
+                                    name={entryIds.email}
+                                    type="email"
+                                    placeholder="seu@email.com"
                                     className="w-full pl-12 pr-4 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-blue-700 focus:bg-white transition-all text-slate-700 font-medium"
                                 />
                             </div>
